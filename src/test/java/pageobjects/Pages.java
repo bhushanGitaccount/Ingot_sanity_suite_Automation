@@ -24,25 +24,16 @@ public class Pages extends BaseClass {
         PageFactory.initElements(driver,this);
     }
 
-//    public Wait wait() {
-//        //System.out.println(driver);
-//        return wait;
-//    }
-
-
     public LoginPage loginPage() {
-        //System.out.println(driver);
         return loginPage;
     }
 
 
     public Actions actions() {
-        //System.out.println(driver);
         return actions;
     }
 
     public Credentials credentials() {
-        //System.out.println(driver);
         return credentials;
     }
 

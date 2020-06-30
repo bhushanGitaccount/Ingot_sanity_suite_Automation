@@ -11,8 +11,6 @@ public class Credentials extends BaseClass {
     private Wait wait = new Wait();
 
     public void getCredentials(String credentials) {
-//        java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF);
-//        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
         String cred = System.getProperty("CRED");
         if (credentials.equals("")) {
             if (cred == null) {

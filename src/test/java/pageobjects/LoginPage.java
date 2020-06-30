@@ -9,9 +9,9 @@ import step_definitions.BaseClass;
 import util.Environments;
 
 /**
- * Created by tdatta on 5/25/17.
+ * Created by Bhushan.more
  */
-public class LoginPage extends BaseClass {
+public class LoginPage extends Pages {
     private Wait wait = new Wait();
 
     public LoginPage() {
