@@ -10,43 +10,12 @@ public class Environments {
     public String url;
 
 
-    public Environments() {
 
+    public Environments(String project) {
         driver = Hooks.driver;
 
-        String Env1 = System.getProperty("ENV");
-        String Env ="dev";//Temp solution
-
-        if (Env == null) {
-            Env = "dev";
-        }
-        System.out.println("The test is running on " + Env.toUpperCase() + " environment");
-        switch (Env.toLowerCase()) {
-
-            case "dev":
-            case "development":
-                url = "https://www-dev-bby.conduit4.com/";
-                Hooks.url = url;
-                driver.get(url);
-                break;
-
-            case "qa":
-                url = "https://www-uat-bby.conduit4.com/";
-                Hooks.url = url;
-                driver.get(url);
-
-                break;
-
-
-        }
-    }
-//parameterized constructor
-    public Environments(String env) {
-        driver = Hooks.driver;
-        String project1 = System.getProperty("PROJECT");
-        String project="moto";//temp solution
         if(project.equals("moto")){
-            String Env1 = System.getProperty("ENV");
+//            String Env1 = System.getProperty("ENV");
             String Env="dev";//Temp solution
             System.out.println("The test is running on " + Env.toUpperCase() + " environment");
             switch (Env.toLowerCase()) {
@@ -65,7 +34,7 @@ public class Environments {
             driver = Hooks.driver;
 
 
-            String Env1 = System.getProperty("ENV");
+//            String Env1 = System.getProperty("ENV");
             String Env="dev";//Temp solution
             if (Env == null) {
                 Env = "qa";
@@ -86,7 +55,7 @@ public class Environments {
             driver = Hooks.driver;
 
 
-            String Env1= System.getProperty("ENV");
+//            String Env1= System.getProperty("ENV");
             String Env="dev";//Temp solution
             if (Env == null) {
                 Env = "qa";
@@ -107,7 +76,7 @@ public class Environments {
             driver = Hooks.driver;
 
 
-            String Env1 = System.getProperty("ENV");
+//            String Env1 = System.getProperty("ENV");
             String Env="dev";//Temp solution
             if (Env == null) {
                 Env = "qa";
@@ -116,7 +85,9 @@ public class Environments {
             switch (Env.toLowerCase()) {
 
                 case "dev":
-                    driver.get("https://www-dev-discover.conduit4.com");
+
+                    System.out.println("---------------Openning Qcom site----------");
+                    driver.get("https://qcomna.dev.conduit4.com/lms");
                     break;
                 case "uat":
                     driver.get("https://www-uat-discover.conduit4.com");
@@ -128,7 +99,7 @@ public class Environments {
             driver = Hooks.driver;
 
 
-            String Env1 = System.getProperty("ENV");
+//            String Env1 = System.getProperty("ENV");
             String Env="dev";//Temp solution
             if (Env == null) {
                 Env = "qa";
@@ -149,7 +120,7 @@ public class Environments {
             driver = Hooks.driver;
 
 
-            String Env1 = System.getProperty("ENV");
+//            String Env1 = System.getProperty("ENV");
             String Env="dev";//Temp solution
             if (Env == null) {
                 Env = "qa";

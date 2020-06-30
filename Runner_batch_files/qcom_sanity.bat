@@ -1,0 +1,1 @@
+mvn clean verify -DBROWSER=chrome -DCRED=omsclient -DENV=qa -DtagName=@Test

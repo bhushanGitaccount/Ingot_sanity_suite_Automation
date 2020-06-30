@@ -1,49 +1,17 @@
 package pageobjects;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import step_definitions.BaseClass;
-import util.Credentials;
 
 public class Pages extends BaseClass {
 
-    public Credentials credentials;
 
-    public Actions actions;
-
-    public LoginPage loginPage;
-
+   public Qcom_loginPage_Object QcomloginOBJ;
+   public Qcom_homePage_Objects QcomHomepageOBJ;
 
     public Pages(){
 
-        credentials = new Credentials();
+        QcomloginOBJ = new Qcom_loginPage_Object();
+        QcomHomepageOBJ =new Qcom_homePage_Objects();
 
-        actions = new Actions(driver);
 
-        loginPage = new LoginPage();
-
-        PageFactory.initElements(driver,this);
     }
-
-//    public Wait wait() {
-//        //System.out.println(driver);
-//        return wait;
-//    }
-
-
-    public LoginPage loginPage() {
-        //System.out.println(driver);
-        return loginPage;
-    }
-
-
-    public Actions actions() {
-        //System.out.println(driver);
-        return actions;
-    }
-
-    public Credentials credentials() {
-        //System.out.println(driver);
-        return credentials;
-    }
-
 }
