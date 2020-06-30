@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = true,
 
-        features = {"D:\\Frameworks\\Neosoft frameworks\\Demo_Ricki\\src\\test\\resources\\features"},
+        features = {"D:\\Frameworks\\Neosoft frameworks\\INGOT_Sanity\\src\\test\\resources\\features\\"},
         glue = {"step_definitions"})
 
 public class loginRunner {

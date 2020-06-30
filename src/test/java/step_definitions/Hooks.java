@@ -20,14 +20,10 @@ import static org.openqa.selenium.ie.InternetExplorerDriverService.IE_DRIVER_EXE
 public class Hooks {
 
     public static WebDriver driver;
-    public static String url="https://www.google.com/";
-
     private static String driverDirectory = System.getProperty("user.dir") + "/WebDrivers/usr/bin";
-    private static String downloadFilepath = System.getProperty("user.dir") + "/testData/Download";
+
     private ChromeOptions chromeOptions = new ChromeOptions();
-    private InternetExplorerOptions internetExplorerOptions = new InternetExplorerOptions();
-    private DesiredCapabilities capabilities = new DesiredCapabilities();
-//    String os = System.getProperty("os.name").toLowerCase();
+
     String os = "win";
     private static int failureCount = 0;
     private static int executionCount = 0;
@@ -38,7 +34,7 @@ public class Hooks {
     public void openBrowser(Scenario scenario) throws Exception {
         executionCount++;
 
-        String browser1 = System.getProperty("BROWSER");
+//        String browser1 = System.getProperty("BROWSER");
         String browser ="chrome";
         if (browser == null) {
             browser = System.getenv("BROWSER");
@@ -52,7 +48,7 @@ public class Hooks {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", driverDirectory + "/chrome/chromedriver.exe");
                 if (os.contains("win")) {
-                    System.out.println("******************INSID SWITCH CASE ***************"+url);
+                    System.out.println("******************INSID SWITCH CASE ***************");
                     System.setProperty("webdriver.chrome.driver", driverDirectory + "/chrome/chromedriver.exe");
                     driver = new ChromeDriver(chromeOptions);
                     driver.manage().window().maximize();
